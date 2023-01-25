@@ -50,10 +50,10 @@ custom-tests: $(CUSTOM_TESTS_DEPS)
 %.o: %.c
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-unit_tests.o: unit_tests.c state.c asserts.c
+src/unit_tests.o: src/unit_tests.c src/state.c src/asserts.c
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-custom-tests.o: custom_tests.c state.c asserts.c
+src/custom-tests.o: src/custom_tests.c src/state.c src/asserts.c
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 .PHONY: check-hashes
